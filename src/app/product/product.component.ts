@@ -8,10 +8,18 @@ import { CartService } from '../cart.service';
 })
 export class ProductComponent implements OnInit {
   data: any = [];
-  constructor(private user: UserServiceService) {
+  constructor(
+    private user: UserServiceService,
+    private cartService: CartService
+  ) {
     this.user.getData().subscribe(data => {
       this.data = data;
     });
+  }
+
+  addToCart(product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 
   ngOnInit() {}
