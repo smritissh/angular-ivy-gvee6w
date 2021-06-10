@@ -10,7 +10,7 @@ import { ProductComponent } from './product/product.component';
 import { UserServiceService } from './user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CartService } from './cart.service';
-import { CartComponent } from '../cart/cart.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [BrowserModule, HttpClientModule, FormsModule, MatIconModule],
