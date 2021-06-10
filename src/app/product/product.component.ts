@@ -12,9 +12,7 @@ export class ProductComponent implements OnInit {
     private user: UserServiceService,
     private cartService: CartService
   ) {
-    this.user.getData().subscribe(data => {
-      this.data = data;
-    });
+    this.user.getData().subscribe(data => (this.data = data));
   }
 
   addToCart(product) {
