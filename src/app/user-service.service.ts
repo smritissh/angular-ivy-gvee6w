@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserServiceService {
   constructor(private http: HttpClient) {}
   getData() {
-    let url = 'https://fakestoreapi.com/products';
+    let url = 'https://fakestoreapi.com/products/';
     return this.http.get(url);
   }
 }

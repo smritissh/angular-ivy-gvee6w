@@ -1,58 +1,11 @@
 <div class="container">
-  <div class="card">
+  <div class="card" *ngFor="let item of data">
     <img
       class="card-img-top"
       src="https://images-na.ssl-images-amazon.com/images/I/61eKQzIGq0L._UL1500_.jpg"
-      alt="Watch"
     />
     <div class="card-body">
-      <h5 class="card-title">Watch</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <a href="#" class="btn btn-success">Add To Cart</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://images-na.ssl-images-amazon.com/images/I/71D9ImsvEtL._UL1500_.jpg"
-      alt="Watch"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Watch</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <a href="#" class="btn btn-success">Add To Cart</a>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://images-na.ssl-images-amazon.com/images/I/71thlhJWxCL._UL1500_.jpg"
-      alt="Watch"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Watch</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <a href="#" class="btn btn-success">Add To Cart</a>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://5.imimg.com/data5/CO/XW/MY-44197581/ladies-stylish-purse-500x500.jpg"
-      alt="Watch"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Watch</h5>
+      <h5 class="card-title">{{item.id}}</h5>
       <p class="card-text">
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
@@ -61,4 +14,3 @@
     </div>
   </div>
 </div>
-

@@ -6,11 +6,11 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  public data = [];
-  public nodData: any;
-
+  data: any = [];
   constructor(private user: UserServiceService) {
-    this.user.getData().subscribe(data => this.data);
+    this.user.getData().subscribe(data => {
+      this.data = data;
+    });
   }
 
   ngOnInit() {}
