@@ -10,10 +10,7 @@ export class ProductComponent implements OnInit {
   public nodData: any;
 
   constructor(private user: UserServiceService) {
-    this.user.getData().subscribe(data => {
-      console.warn(data);
-      this.data = data;
-    });
+    this.user.getData().subscribe(data => this.data);
   }
 
   ngOnInit() {}
