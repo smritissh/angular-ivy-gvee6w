@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',

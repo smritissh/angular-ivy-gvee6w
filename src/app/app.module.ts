@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
 import { UserServiceService } from './user-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CartService } from './cart.service';
 
 @NgModule({
   imports: [BrowserModule, HttpClientModule, FormsModule, MatIconModule],
@@ -19,6 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent
   ],
   bootstrap: [AppComponent],
-  providers: [UserServiceService]
+  providers: [UserServiceService, CartService]
 })
 export class AppModule {}
