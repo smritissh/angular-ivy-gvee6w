@@ -5,11 +5,9 @@
       src="https://images-na.ssl-images-amazon.com/images/I/61eKQzIGq0L._UL1500_.jpg"
     />
     <div class="card-body">
-      <h5 class="card-title">{{item.id}}</h5>
+      <h5 class="card-title">{{item.id}} - &#x20B9;{{ item.price }}</h5>
       <p class="card-text">{{item.title}}</p>
-      <a href="#" class="btn btn-success" (click)="addToCart(item)"
-        >Add To Cart</a
-      >
+      <a href="#" class="btn btn-success" (click)="addToCart(item)">Add To Cart</a>
     </div>
   </div>
 </div>
