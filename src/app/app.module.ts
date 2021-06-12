@@ -11,9 +11,16 @@ import { UserServiceService } from './user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
-  imports: [BrowserModule, HttpClientModule, FormsModule, MatIconModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    MatIconModule,
+    Ng2SearchPipeModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
