@@ -1,2 +1,2 @@
-<app-header (parentComponent)="parentComponent($event)"></app-header>
-<app-product></app-product>
+<app-header (searchInputEmitter)="recieveEmitter($event)"></app-header>
+<app-product [searchStringRecieved]="reciever"></app-product>

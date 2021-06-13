@@ -6,10 +6,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() parentComponent: EventEmitter<any> = new EventEmitter();
+  searchString = '';
+  @Output() searchInputEmitter = new EventEmitter();
+
+  onInput(event) {
+    this.searchString = event.target.value;
+    this.searchInputEmitter.emit(this.searchString);
+  }
   constructor() {}
 
-  ngOnInit() {
-    this.parentComponent.emit('hello');
-  }
+  ngOnInit() {}
 }

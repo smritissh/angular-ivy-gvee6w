@@ -10,7 +10,7 @@
       />
       <div class="searchbar">
 
-        <input type="text" class="input" placeholder="Enter the text here!">
+        <input type="text" class="input" (input)="onInput($event)" placeholder="Enter the text here!">
         <div class="searchbar_icon">
           <mat-icon>search</mat-icon>
         </div>

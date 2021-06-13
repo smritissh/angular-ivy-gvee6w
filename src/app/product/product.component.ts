@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 // import { UserServiceService } from '../user-service.service';
-import data from './data.json';
+import data from '../data.json';
 export interface Data {
   id: number;
   title: string;
@@ -16,6 +16,9 @@ export interface Data {
 })
 export class ProductComponent implements OnInit {
   datas: Data[] = data;
+
+  @Input() searchStringRecieved: string;
+
   constructor() {}
   ngOnInit() {}
 }

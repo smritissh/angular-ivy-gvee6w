@@ -9,9 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ProductFilterPipe } from './product/filter.pipe';
 // import { CartService } from './cart.service';
 // import { CartComponent } from './cart/cart.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HttpClientModule,
     FormsModule,
     MatIconModule,
-    Ng2SearchPipeModule
+    ProductFilterPipe
   ],
   declarations: [
     AppComponent,
