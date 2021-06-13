@@ -8,6 +8,7 @@ import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
+import { DetailsComponent } from './details/details.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './product/filter.pipe';
@@ -25,6 +26,7 @@ import { ProductFilterPipe } from './product/filter.pipe';
     HelloComponent,
     HeaderComponent,
     ProductComponent,
+    DetailsComponent,
     ProductFilterPipe
   ],
   bootstrap: [AppComponent],

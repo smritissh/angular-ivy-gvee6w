@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 // routerConfig.ts
 
 import { Routes } from '@angular/router';
-import { ProductComponent } from '../product/product.component';
+import { ProductComponent } from '../details/details.component';
 
-const appRoutes: Routes = [{ path: 'product', component: ProductComponent }];
+const appRoutes: Routes = [{ path: 'details', component: DetailsComponent }];
 export default appRoutes;
