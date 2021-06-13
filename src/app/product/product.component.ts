@@ -16,6 +16,10 @@ export interface Data {
 export class ProductComponent implements OnInit {
   datas: Data[] = data;
 
+  onUserClick(event) {
+    alert(this.datas[0].id);
+  }
+
   @Input() searchStringRecieved: string;
 
   constructor() {}
