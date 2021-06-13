@@ -7,7 +7,7 @@ import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
-import { UserServiceService } from './user-service.service';
+
 import { HttpClientModule } from '@angular/common/http';
 // import { CartService } from './cart.service';
 // import { CartComponent } from './cart/cart.component';
@@ -29,6 +29,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     // CartComponent
   ],
   bootstrap: [AppComponent],
-  providers: [UserServiceService]
+  providers: []
 })
 export class AppModule {}
