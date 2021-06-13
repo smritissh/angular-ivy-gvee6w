@@ -9,8 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
 import { UserServiceService } from './user-service.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CartService } from './cart.service';
-import { CartComponent } from './cart/cart.component';
+// import { CartService } from './cart.service';
+// import { CartComponent } from './cart/cart.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
@@ -25,10 +25,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppComponent,
     HelloComponent,
     HeaderComponent,
-    ProductComponent,
-    CartComponent
+    ProductComponent
+    // CartComponent
   ],
   bootstrap: [AppComponent],
-  providers: [UserServiceService, CartService]
+  providers: [UserServiceService]
 })
 export class AppModule {}
