@@ -6,6 +6,7 @@ export interface Data {
   title: string;
   price: number;
   image: string;
+  details: string;
 }
 @Component({
   selector: 'app-product',

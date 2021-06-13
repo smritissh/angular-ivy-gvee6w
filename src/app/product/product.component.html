@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="card" *ngFor="let item of datas | productFilter:searchStringRecieved">
+
+  <div class="card" *ngFor="let item of datas | productFilter:searchStringRecieved" routerLink="/details">
     <img
       class="card-img-top"
       src="https://images-na.ssl-images-amazon.com/images/I/61eKQzIGq0L._UL1500_.jpg"

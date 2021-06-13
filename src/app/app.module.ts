@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -10,8 +9,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
 import { DetailsComponent } from './details/details.component';
 
+
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './product/filter.pipe';
+
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path:'details', component:DetailsComponent}
+];
 
 @NgModule({
   imports: [
@@ -19,7 +25,8 @@ import { ProductFilterPipe } from './product/filter.pipe';
     HttpClientModule,
     FormsModule,
     MatIconModule,
-    RouterModule
+    RouterModule.forRoot(appRoutes)
+    
   ],
   declarations: [
     AppComponent,
