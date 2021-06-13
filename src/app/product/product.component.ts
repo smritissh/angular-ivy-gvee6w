@@ -1,12 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-// import { UserServiceService } from '../user-service.service';
+
 import data from '../data.json';
 export interface Data {
   id: number;
   title: string;
   price: number;
-  description: string;
-  category: string;
   image: string;
 }
 @Component({

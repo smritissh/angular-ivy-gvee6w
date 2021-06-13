@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -10,18 +11,21 @@ import { ProductComponent } from './product/product.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './product/filter.pipe';
-// import { CartService } from './cart.service';
-// import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  imports: [BrowserModule, HttpClientModule, FormsModule, MatIconModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    MatIconModule,
+    RouterModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
     HeaderComponent,
     ProductComponent,
     ProductFilterPipe
-    // CartComponent
   ],
   bootstrap: [AppComponent],
   providers: []
