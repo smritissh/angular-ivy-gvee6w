@@ -96,5 +96,6 @@
       }
     }
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "aot": false
 }

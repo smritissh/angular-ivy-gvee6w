@@ -14,18 +14,13 @@ import { ProductFilterPipe } from './product/filter.pipe';
 // import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    MatIconModule,
-    ProductFilterPipe
-  ],
+  imports: [BrowserModule, HttpClientModule, FormsModule, MatIconModule],
   declarations: [
     AppComponent,
     HelloComponent,
     HeaderComponent,
-    ProductComponent
+    ProductComponent,
+    ProductFilterPipe
     // CartComponent
   ],
   bootstrap: [AppComponent],
