@@ -7,19 +7,13 @@
   },
   {
     "id": 1,
-    "title": "Laptop",
+    "title": "Mobile",
     "price": 109.95,
     "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
   },
   {
     "id": 1,
-    "title": "Laptop",
-    "price": 109.95,
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-  },
-  {
-    "id": 1,
-    "title": "Laptop",
+    "title": "Bags",
     "price": 109.95,
     "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
   }
