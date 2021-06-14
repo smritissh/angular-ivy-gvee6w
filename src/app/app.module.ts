@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'details', component: DetailsComponent }
+  
 ];
 
 @NgModule({
