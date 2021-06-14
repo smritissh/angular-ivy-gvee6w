@@ -10,7 +10,7 @@
       <p class="card-text">{{item.title}}</p>
       <div class="button">
         <a routerLink="/cart" class="btn btn-success">Add To Cart</a>
-        <button class="btn btn-primary">More</button>
+        <button class="btn btn-primary" (click)="onUserClick($event)" [routerLink]="item.id">More</button>
       </div>
 
     </div>

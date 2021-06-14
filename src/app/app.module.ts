@@ -20,7 +20,7 @@ import { CartItemService } from './cart-item.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'details', component: DetailsComponent },
+  { path: ':id', component: DetailsComponent },
   { path: 'cart', component: CartComponent }
 ];
 

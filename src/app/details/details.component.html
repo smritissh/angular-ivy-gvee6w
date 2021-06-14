@@ -1,4 +1,6 @@
-<p>
-  details works!
-</p>
-<button class="btn btn-success" routerLink="">Back</button>
+<div *ngFor="lst data of datas | detailsFilter:productId">
+  <p>{{datas.id}}</p>
+  <p>{{datas.title}}</p>
+  <p>{{datas.price}}</p>
+  <button class="btn btn-success" routerLink="">Back</button>
+</div>
