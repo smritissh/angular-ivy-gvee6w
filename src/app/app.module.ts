@@ -14,11 +14,12 @@ import { ProductFilterPipe } from './product/filter.pipe';
 
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'details', component: DetailsComponent }
-  
+  { path: 'details', component: DetailsComponent },
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     ProductComponent,
     DetailsComponent,
     ProductFilterPipe,
-    HomeComponent
+    HomeComponent,
+    CartComponent
   ],
   bootstrap: [AppComponent],
   providers: []
