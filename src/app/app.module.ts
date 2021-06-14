@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './product/filter.pipe';
 
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { CartItemService } from './cart-item.service';
