@@ -6,8 +6,5 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  reciever = '';
-  recieveEmitter(inputString: string) {
-    this.reciever = inputString;
-  }
+ 
 }

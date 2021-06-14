@@ -9,14 +9,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProductComponent } from './product/product.component';
 import { DetailsComponent } from './details/details.component';
 
-
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './product/filter.pipe';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  {path:'details', component:DetailsComponent}
+  { path: '', component: HomeComponent },
+  { path: 'details', component: DetailsComponent }
 ];
 
 @NgModule({
@@ -26,7 +27,6 @@ const appRoutes: Routes = [
     FormsModule,
     MatIconModule,
     RouterModule.forRoot(appRoutes)
-    
   ],
   declarations: [
     AppComponent,
@@ -34,7 +34,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     ProductComponent,
     DetailsComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    HomeComponent
   ],
   bootstrap: [AppComponent],
   providers: []
