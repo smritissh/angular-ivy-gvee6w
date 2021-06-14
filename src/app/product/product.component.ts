@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import data from '../data.json';
 export interface Data {
   id: string;
@@ -17,10 +16,7 @@ export class ProductComponent implements OnInit {
   datas: Data[] = data;
 
   @Input() searchStringRecieved: string;
-  onUserClick(event) {
-    let detail = event.target.previousElementSibling.previousElementSibling;
-    console.log(detail);
-  }
+  onUserClick(event) {}
   constructor() {}
   ngOnInit() {}
 }

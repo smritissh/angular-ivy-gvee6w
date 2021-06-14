@@ -11,6 +11,7 @@ import { DetailsComponent } from './details/details.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './product/filter.pipe';
+import { DetailsFilterPipe} from './details/FilterDetails.pipe';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
     ProductComponent,
     DetailsComponent,
     ProductFilterPipe,
+    DetailsFilterPipe,
     HomeComponent,
     CartComponent
   ],

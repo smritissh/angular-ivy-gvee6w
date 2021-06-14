@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import data from '../data.json';
+
 export interface Data {
   id: string;
   title: string;

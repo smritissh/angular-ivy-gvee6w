@@ -1,6 +1,7 @@
-<div *ngFor="lst data of datas | detailsFilter:productId">
-  <p>{{datas.id}}</p>
-  <p>{{datas.title}}</p>
-  <p>{{datas.price}}</p>
+<div *ngFor="let data of datas | detailsFilter:productId">
+  <p>{{data.id}}</p>
+  <p>{{data.title}}</p>
+  <p>{{data.price}}</p>
+  <p>{{data.details}}</p>
   <button class="btn btn-success" routerLink="">Back</button>
 </div>

@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Data } from './details.component';
 
 @Pipe({
-  name: 'FilterDetails'
+  name: 'detailsFilter'
 })
-export class ProductFilterPipe implements PipeTransform {
+export class DetailsFilterPipe implements PipeTransform {
   transform(itemList: Data[], searchid: string): Data[] {
     if (!itemList || !searchid) {
       return itemList;
