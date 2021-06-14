@@ -20,7 +20,8 @@ import { CartItemService } from './cart-item.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'details', component: DetailsComponent }
+  { path: 'details', component: DetailsComponent },
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({
