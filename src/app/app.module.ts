@@ -15,7 +15,6 @@ import { ProductFilterPipe } from './product/filter.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
-import { CartServiceService } from './cart-service.service';
 import { CartItemService } from './cart-item.service';
 
 const appRoutes: Routes = [
@@ -42,6 +41,6 @@ const appRoutes: Routes = [
     CartComponent
   ],
   bootstrap: [AppComponent],
-  providers: [CartServiceService, CartItemService]
+  providers: [CartItemService]
 })
 export class AppModule {}
