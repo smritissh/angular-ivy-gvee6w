@@ -23,12 +23,14 @@ export class ProductComponent implements OnInit {
     this.cartItem.sendCartItem(this.c);
   }
 
-  onCartRemove(){
-    this.c = this.c-1;
-    this.cartItem.sendCartItem(this.c);
+  onCartRemove() {
+    if (this.c === 0) {
+      alert('Cart is empty');
+    } else {
+      this.c = this.c - 1;
+      this.cartItem.sendCartItem(this.c);
+    }
   }
   constructor(private cartItem: CartItemService) {}
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 }
