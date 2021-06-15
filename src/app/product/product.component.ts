@@ -22,6 +22,11 @@ export class ProductComponent implements OnInit {
     this.c = this.c + 1;
     this.cartItem.sendCartItem(this.c);
   }
+
+  onCartRemove(){
+    this.c = this.c-1;
+    this.cartItem.sendCartItem(this.c);
+  }
   constructor(private cartItem: CartItemService) {}
   ngOnInit() {
 

@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartItemService {
-  private cart = new BehaviorSubject<any>('null');
+  private cart = new BehaviorSubject<any>(null);
 
   constructor() {}
   sendCartItem(num: any) {

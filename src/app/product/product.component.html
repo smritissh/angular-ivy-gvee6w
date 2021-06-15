@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="card" *ngFor="let item of datas | productFilter:searchStringRecieved" routerLink="/details">
+  <div class="card" *ngFor="let item of datas | productFilter:searchStringRecieved">
     <img
       class="card-img-top"
       src="https://images-na.ssl-images-amazon.com/images/I/61eKQzIGq0L._UL1500_.jpg"
@@ -10,6 +10,7 @@
       <p class="card-text">{{item.title}}</p>
       <div class="button">
         <button class="btn btn-success" (click)="onCartBtnClick()">Add To Cart</button>
+        <button class="btn btn-danger" (click)="onCartRemove()">Remove</button>
         <button class="btn btn-primary"  (click)="onUserClick($event)" [routerLink]="item.id">More</button>
       </div>
 
