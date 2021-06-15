@@ -9,7 +9,7 @@
       <h5 class="card-title">{{item.id}} - &#x20B9;{{ item.price }}</h5>
       <p class="card-text">{{item.title}}</p>
       <div class="button">
-        <a class="btn btn-success" (click)="onCartBtnClick()">Add To Cart</a>
+        <button class="btn btn-success" (click)="onCartBtnClick()">Add To Cart</button>
         <button class="btn btn-primary"  (click)="onUserClick($event)" [routerLink]="item.id">More</button>
       </div>
 
