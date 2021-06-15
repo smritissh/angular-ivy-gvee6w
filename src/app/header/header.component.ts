@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CartItemService } from '../cart-item.service';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,18 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   searchString = '';
+  cartCount = 0;
   @Output() searchInputEmitter = new EventEmitter();
 
   onInput(event) {
     this.searchString = event.target.value;
     this.searchInputEmitter.emit(this.searchString);
   }
-  constructor() {}
+  constructor(private cartItem: CartItemService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.cartItem.getCartItem().subscribe(e => {
+      this.cartCount = e;
+    });
+  }
 }

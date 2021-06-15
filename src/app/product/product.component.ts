@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CartItemService } from '../cart-item.service';
 import data from '../data.json';
 export interface Data {
   id: string;
@@ -14,9 +15,15 @@ export interface Data {
 })
 export class ProductComponent implements OnInit {
   datas: Data[] = data;
-
+  c = 0;
   @Input() searchStringRecieved: string;
   onUserClick(event) {}
-  constructor() {}
-  ngOnInit() {}
+  onCartBtnClick() {
+    this.c = this.c + 1;
+    this.cartItem.sendCartItem(this.c);
+  }
+  constructor(private cartItem: CartItemService) {}
+  ngOnInit() {
+
+  }
 }
