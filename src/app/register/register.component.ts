@@ -10,7 +10,7 @@ export class RegisterComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.registerationForm = new FormGroup({
+    registerationForm = new FormGroup({
       name: new FormControl('smriti'),
       mobileNo: new FormControl(''),
       email: new FormControl(''),
