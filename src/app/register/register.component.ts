@@ -7,14 +7,14 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerationForm = new FormGroup({
-    name: new FormControl('smriti'),
-    mobileNo: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl('')
-  });
-
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.registerationForm = new FormGroup({
+      name: new FormControl('smriti'),
+      mobileNo: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl('')
+    });
+  }
 }
