@@ -18,4 +18,5 @@ export class RegisterComponent implements OnInit {
       password: new FormControl('')
     });
   }
+  onSubmit() {}
 }
