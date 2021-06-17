@@ -9,27 +9,35 @@ import { Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerationForm: FormGroup;
+
   constructor() {}
 
   ngOnInit() {
     this.registerationForm = new FormGroup({
-      name: new FormControl('smriti', [
-        Validators.required,
-        Validators.minLength(4)
-      ]),
+      name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+
       mobileNo: new FormControl('', [
         Validators.required,
-        Validators.maxLength(10),
-        Validators.minLength(10)
+        Validators.minLength(10),
+        Validators.maxLength(10)
       ]),
-      email: new FormControl('', [
-        Validators.required,
-        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')
-      ]),
+
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required)
     });
   }
   onSubmit() {
-    console.log('thsi.registerationForm');
+    console.warn(this.registerationForm.value);
+  }
+
+  get email() {
+    return this.registerationForm.get('email');
+  }
+
+  get mobileNo() {
+    return this.registerationForm.get('mobileNo');
+  }
+  get name() {
+    return this.registerationForm.get('name');
   }
 }
