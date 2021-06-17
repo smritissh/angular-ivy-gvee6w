@@ -18,8 +18,7 @@ export class RegisterComponent implements OnInit {
 
       mobileNo: new FormControl('', [
         Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(10)
+        Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
       ]),
 
       email: new FormControl('', [Validators.required, Validators.email]),
