@@ -24,6 +24,6 @@ export class HeaderComponent implements OnInit {
     });
   }
   onClickRegister() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/register-router']);
   }
 }
