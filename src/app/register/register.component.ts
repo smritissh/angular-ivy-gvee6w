@@ -8,7 +8,9 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerationForm: FormGroup;
-  constructor() {
+  constructor() {}
+
+  ngOnInit() {
     this.registerationForm = new FormGroup({
       name: new FormControl('smriti'),
       mobileNo: new FormControl(''),
@@ -16,6 +18,4 @@ export class RegisterComponent implements OnInit {
       password: new FormControl('')
     });
   }
-
-  ngOnInit() {}
 }
