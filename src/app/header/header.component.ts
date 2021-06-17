@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
       this.cartCount = e;
     });
   }
-  // onClickRegister() {
-  //   this.router.navigate(['/register-route']);
-  // }
+  onClickRegister() {
+    this.router.navigate(['/register']);
+  }
 }
