@@ -20,12 +20,10 @@ import { HomeComponent } from './home/home.component';
 
 import { CartItemService } from './cart-item.service';
 import { RegisterComponent } from './register/register.component';
-import { RegisterRouterComponent } from './register-router/register-router.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: ':id', component: DetailsComponent },
-  { path: 'register-router', component: RegisterRouterComponent }
+  { path: ':id', component: DetailsComponent }
 ];
 
 @NgModule({
@@ -46,8 +44,7 @@ const appRoutes: Routes = [
     ProductFilterPipe,
     DetailsFilterPipe,
     HomeComponent,
-    RegisterComponent,
-    RegisterRouterComponent
+    RegisterComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartItemService]
