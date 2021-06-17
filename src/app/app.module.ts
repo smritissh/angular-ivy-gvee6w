@@ -23,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'register', component: RegisterComponent },
   { path: ':id', component: DetailsComponent }
 ];
 
