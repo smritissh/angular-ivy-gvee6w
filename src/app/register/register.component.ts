@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     this.registerationForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      address: new FormControl('', Validators.required),
 
       mobileNo: new FormControl('', [
         Validators.required,
@@ -22,13 +23,18 @@ export class RegisterComponent implements OnInit {
       ]),
 
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', Validators.required)
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6)
+      ])
     });
   }
   onSubmit() {
     console.warn(this.registerationForm.value);
   }
-
+  get address() {
+    return this.registerationForm.get('address');
+  }
   get email() {
     return this.registerationForm.get('email');
   }
@@ -38,5 +44,8 @@ export class RegisterComponent implements OnInit {
   }
   get name() {
     return this.registerationForm.get('name');
+  }
+  get password() {
+    return this.registerationForm.get('password');
   }
 }
