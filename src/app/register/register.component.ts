@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
@@ -10,13 +10,12 @@ import { Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   registerationForm: FormGroup;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.registerationForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      address: new FormControl('', Validators.required),
-
+      address: this.fb.array([]),
       mobileNo: new FormControl('', [
         Validators.required,
         Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
@@ -33,7 +32,10 @@ export class RegisterComponent implements OnInit {
     console.warn(this.registerationForm.value);
   }
   get address() {
-    return this.registerationForm.get('address');
+    return this.registerationForm.get('address') as FormArray;
+  }
+  addAlternateAddress() {
+    this.address.push(this.fb.control(''));
   }
   get email() {
     return this.registerationForm.get('email');
