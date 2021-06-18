@@ -46,6 +46,7 @@ export class RegisterComponent implements OnInit {
       this.street.push(this.fb.control('')),
       this.pincode.push(this.fb.control(''));
   }
+
   get email() {
     return this.registerationForm.get('email');
   }

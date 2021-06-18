@@ -20,17 +20,18 @@
       <div class="form-group col-md-4">
         <label>Street</label>
         <input type="text"  formControlName="street" class="form-control" >
-        <div formArrayName="address" *ngFor="let add of address.controls; let i= index">
+        <div formArrayName="street" *ngFor="let stee of street.controls; let i= index">
           <input type ="text" class="form-control my-1" [formControlName]="i">
         </div>
       </div>
       <div class="form-group col-md-2">
         <label>Pincode</label>
         <input type="number"  formControlName="pincode" class="form-control" >
-        <div formArrayName="address" *ngFor="let add of address.controls; let i= index">
-          <input type ="numbe" class="form-control my-1" [formControlName]="i">
+        <div formArrayName="pincode" *ngFor="let pin of pincode.controls; let i= index">
+          <input type ="number" class="form-control my-1" [formControlName]="i">
         </div>
       </div>
+
       <div class="form-group col-md-2">
         <button class="button btn btn-secondary m-2" (click)="addAlternateAddress()">+</button>
       </div>
