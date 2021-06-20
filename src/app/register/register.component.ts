@@ -47,6 +47,8 @@ export class RegisterComponent implements OnInit {
       this.pincode.push(this.fb.control(''));
   }
 
+  delAlternateAddress() {}
+
   get email() {
     return this.registerationForm.get('email');
   }
