@@ -41,20 +41,8 @@ export class RegisterComponent implements OnInit {
       pincode: ''
     });
   }
-  // get address() {
-  //   return this.registerationForm.get('address') as FormArray;
-  // }
-  // get street() {
-  //   return this.registerationForm.get('street') as FormArray;
-  // }
-  // get pincode() {
-  //   return this.registerationForm.get('pincode') as FormArray;
-  // }
   addAlternateAddress() {
     this.address().push(this.newaddress());
-    // this.address.push(this.fb.control('')),
-    //   this.street.push(this.fb.control('')),
-    //   this.pincode.push(this.fb.control(''));
   }
 
   delAlternateAddress(i: number) {
@@ -74,41 +62,4 @@ export class RegisterComponent implements OnInit {
   get password() {
     return this.registerationForm.get('password');
   }
-  //   this.registerationForm = this.fb.group({
-  //     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-  //     address: this.fb.array([]),
-  //     mobileNo: new FormControl('', [
-  //       Validators.required,
-  //       Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
-  //     ]),
-  //     email: new FormControl('', [Validators.required, Validators.email]),
-  //     password: new FormControl('', [
-  //       Validators.required,
-  //       Validators.minLength(6)
-  //     ])
-  //   });
-  // }
-
-  // address(): FormArray {
-  //   return this.registerationForm.get('address') as FormArray;
-  // }
-
-  // newaddress(): FormGroup {
-  //   return this.fb.group({
-  //     address: '',
-  //     street: '',
-  //     pincode: ''
-  //   });
-  // }
-  // addQuantity() {
-  //   this.address().push(this.newaddress());
-  // }
-
-  // removeQuantity(i: number) {
-  //   this.address().removeAt(i);
-  // }
-
-  // onSubmit() {
-  //   console.log(this.registerationForm.value);
-  // }
 }
