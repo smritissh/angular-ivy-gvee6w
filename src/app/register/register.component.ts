@@ -9,16 +9,14 @@ import { Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerationForm: FormGroup;
-  // productForm: FormGroup;
-
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.registerationForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(4)]),
       address: this.fb.array([]),
-      street: this.fb.array([]),
-      pincode: this.fb.array([]),
+      // street: this.fb.array([]),
+      // pincode: this.fb.array([]),
       mobileNo: new FormControl('', [
         Validators.required,
         Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
@@ -33,22 +31,35 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     console.warn(this.registerationForm.value);
   }
-  get address() {
+  address(): FormArray {
     return this.registerationForm.get('address') as FormArray;
   }
-  get street() {
-    return this.registerationForm.get('street') as FormArray;
+  newaddress(): FormGroup {
+    return this.fb.group({
+      address: '',
+      street: '',
+      pincode: ''
+    });
   }
-  get pincode() {
-    return this.registerationForm.get('pincode') as FormArray;
-  }
+  // get address() {
+  //   return this.registerationForm.get('address') as FormArray;
+  // }
+  // get street() {
+  //   return this.registerationForm.get('street') as FormArray;
+  // }
+  // get pincode() {
+  //   return this.registerationForm.get('pincode') as FormArray;
+  // }
   addAlternateAddress() {
-    this.address.push(this.fb.control('')),
-      this.street.push(this.fb.control('')),
-      this.pincode.push(this.fb.control(''));
+    this.address().push(this.newaddress());
+    // this.address.push(this.fb.control('')),
+    //   this.street.push(this.fb.control('')),
+    //   this.pincode.push(this.fb.control(''));
   }
 
-  delAlternateAddress() {}
+  delAlternateAddress(i: number) {
+    this.address().removeAt(i);
+  }
 
   get email() {
     return this.registerationForm.get('email');
