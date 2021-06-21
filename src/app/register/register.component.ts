@@ -9,6 +9,7 @@ import { Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerationForm: FormGroup;
+  // productForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
@@ -62,4 +63,41 @@ export class RegisterComponent implements OnInit {
   get password() {
     return this.registerationForm.get('password');
   }
+  //   this.registerationForm = this.fb.group({
+  //     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+  //     address: this.fb.array([]),
+  //     mobileNo: new FormControl('', [
+  //       Validators.required,
+  //       Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
+  //     ]),
+  //     email: new FormControl('', [Validators.required, Validators.email]),
+  //     password: new FormControl('', [
+  //       Validators.required,
+  //       Validators.minLength(6)
+  //     ])
+  //   });
+  // }
+
+  // address(): FormArray {
+  //   return this.registerationForm.get('address') as FormArray;
+  // }
+
+  // newaddress(): FormGroup {
+  //   return this.fb.group({
+  //     address: '',
+  //     street: '',
+  //     pincode: ''
+  //   });
+  // }
+  // addQuantity() {
+  //   this.address().push(this.newaddress());
+  // }
+
+  // removeQuantity(i: number) {
+  //   this.address().removeAt(i);
+  // }
+
+  // onSubmit() {
+  //   console.log(this.registerationForm.value);
+  // }
 }
