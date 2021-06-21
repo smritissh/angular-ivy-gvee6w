@@ -27,6 +27,8 @@
       <div class="form-group col-md-2">
         <label>Pincode</label>
         <input type="number"  formControlName="pincode" class="form-control" >
+
+
         <div formArrayName="pincode" *ngFor="let pin of pincode.controls; let i= index">
           <input type ="number" class="form-control my-1" [formControlName]="i">
         </div>
