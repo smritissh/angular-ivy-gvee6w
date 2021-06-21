@@ -6,7 +6,7 @@
       <input type="text"  formControlName="name" class="form-control" >
       <span class="error"  *ngIf="name.invalid && name.touched">Name Should be more than 4 letters</span>
     </div>
-    <table class="table table-bordered" formArrayName="address">
+    <!-- <table class="table table-bordered" formArrayName="address">
       <tr>
         <td>
           Address :
@@ -41,7 +41,43 @@
           <button  class="btn btn-danger" (click)="delAlternateAddress(i)">-</button>
         </td>
       </tr>
-    </table>
+    </table> -->
+
+    <div class="row" formArrayName="address">
+      <div class="form-group col-md-4">
+        <label>Address</label>
+        <input type="text"  formControlName="address" class="form-control" >
+      </div>
+      <div class="form-group col-md-4">
+        <label>Street</label>
+        <input type="text"  formControlName="street" class="form-control" >
+      </div>
+      <div class="form-group col-md-2">
+        <label>Pincode</label>
+        <input type="number"  formControlName="pincode" class="form-control" >
+      </div>
+      <div class="form-group col-md-2">
+        <button class="button btn btn-secondary m-2" (click)="addAlternateAddress()">+</button>
+      </div>
+      <div class="form-group col-md-4" *ngFor="let quantity of address().controls; let i=index" [formGroupName]="i">
+        <label>Address</label>
+        <input type="text"  formControlName="address" class="form-control" >
+      </div>
+      <div class="form-group col-md-4">
+        <label>Street</label>
+        <input type="text"  formControlName="street" class="form-control" >
+      </div>
+      <div class="form-group col-md-2">
+        <label>Pincode</label>
+        <input type="number"  formControlName="pincode" class="form-control" >
+      </div>
+      <div class="form-group col-md-2">
+        <button  class="btn btn-danger" (click)="delAlternateAddress(i)">-</button>
+      </div>
+
+    </div>
+
+
     <div class="form-group">
       <label>Mobile No</label>
       <input type="number" formControlName="mobileNo" class="form-control" >
