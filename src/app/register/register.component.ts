@@ -15,8 +15,6 @@ export class RegisterComponent implements OnInit {
     this.registerationForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(4)]),
       address: this.fb.array([]),
-      // street: this.fb.array([]),
-      // pincode: this.fb.array([]),
       mobileNo: new FormControl('', [
         Validators.required,
         Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
