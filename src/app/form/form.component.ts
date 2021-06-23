@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormArray,
+  FormBuilder,
+  AbstractControl
+} from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { NameService } from '../name.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -17,7 +24,7 @@ export class FormComponent implements OnInit {
           Validators.required,
           Validators.minLength(4)
         ]),
-        // address: this.fb.array([]),
+        address: this.fb.array([]),
         mobileNo: new FormControl('', [
           Validators.required,
           Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$'),
@@ -34,32 +41,30 @@ export class FormComponent implements OnInit {
           Validators.minLength(6),
           Validators.maxLength(6)
         ])
+      },
+      {
+        validators: [this.passwordConfirming]
       }
-      // {
-      //   validators: [this.passwordConfirming]
-      // }
     );
   }
-  onSubmit() {
-    console.warn(this.registerationForm.value);
+  onSubmit() {}
+  address(): FormArray {
+    return this.registerationForm.get('address') as FormArray;
   }
-  // address(): FormArray {
-  //   return this.registerationForm.get('address') as FormArray;
-  // }
-  // newaddress(): FormGroup {
-  //   return this.fb.group({
-  //     address: [''],
-  //     street: [''],
-  //     pincode: ['']
-  //   });
-  // }
-  // addAlternateAddress() {
-  //   this.address().push(this.newaddress());
-  // }
+  newaddress(): FormGroup {
+    return this.fb.group({
+      address: [''],
+      street: [''],
+      pincode: ['']
+    });
+  }
+  addAlternateAddress() {
+    this.address().push(this.newaddress());
+  }
 
-  // delAlternateAddress(i: number) {
-  //   this.address().removeAt(i);
-  // }
+  delAlternateAddress(i: number) {
+    this.address().removeAt(i);
+  }
   get email() {
     return this.registerationForm.get('email');
   }
@@ -76,9 +81,9 @@ export class FormComponent implements OnInit {
   get confirmPassword() {
     return this.registerationForm.get('confirmPassword');
   }
-  // passwordConfirming(c: AbstractControl): { invalid: boolean } {
-  //   if (c.get('password').value !== c.get('confirmPassword').value) {
-  //     return { invalid: true };
-  //   }
-  // }
+  passwordConfirming(c: AbstractControl): { invalid: boolean } {
+    if (c.get('password').value !== c.get('confirmPassword').value) {
+      return { invalid: true };
+    }
+  }
 }

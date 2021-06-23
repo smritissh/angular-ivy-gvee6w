@@ -6,7 +6,7 @@
       <input type="text"  formControlName="name" class="form-control" >
       <span class="error"  *ngIf="name.invalid && name.touched">Name Should be more than 4 letters</span>
     </div>
-    <!-- <table class="table table-bordered" formArrayName="address">
+    <table class="table table-bordered" formArrayName="address">
       <tr>
         <td>
           *Address :
@@ -41,7 +41,7 @@
           <button  class="btn btn-danger" (click)="delAlternateAddress(i)">-</button>
         </td>
       </tr>
-    </table> -->
+    </table>
     <div class="form-group">
       <label>*Mobile No</label>
       <input type="number" formControlName="mobileNo" class="form-control" >
@@ -61,12 +61,12 @@
       <label>*Confirm Password</label>
       <input type="password"  formControlName="confirmPassword"class="form-control">
       <span class="error" *ngIf="confirmPassword.invalid && confirmPassword.touched">Password is required & must be of 6 characters</span>
-      <!-- <span class="error"
+      <span class="error"
         *ngIf="registerationForm.get(['password','confirmPassword']).value != registerationForm.get(['password','confirmPassword']).value && registerationForm.get(['password','confirmPassword']).value != null">
         Password does not match
-      </span> -->
+      </span>
     </div>
     <p>Complete the form to enable button.</p>
-    <button class="btn btn-success" [disabled]="registerationForm.invalid">Submit</button>
+    <button class="btn btn-success" [disabled]="registerationForm.invalid"(click)="onSubmit">Submit</button>
   </form>
 </div>

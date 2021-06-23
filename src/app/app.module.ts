@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { CartItemService } from './cart-item.service';
 import { RegisterComponent } from './register/register.component';
 import { FormComponent } from './form/form.component';
+import { NameService } from './name.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +51,6 @@ const appRoutes: Routes = [
     FormComponent
   ],
   bootstrap: [AppComponent],
-  providers: [CartItemService]
+  providers: [CartItemService, NameService]
 })
 export class AppModule {}
