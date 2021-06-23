@@ -35,17 +35,17 @@ export class RegisterComponent implements OnInit {
           Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')
         ]),
         confirmPassword: new FormControl('', Validators.required)
-      },
-      {
-        validators: [this.passwordConfirming]
       }
+      // {
+      //   validators: [this.passwordConfirming]
+      // }
     );
   }
-  passwordConfirming(c: AbstractControl): { invalid: boolean } {
-    if (c.get('password').value !== c.get('confirmPassword').value) {
-      return { invalid: true };
-    }
-  }
+  // passwordConfirming(c: AbstractControl): { invalid: boolean } {
+  //   if (c.get('password').value !== c.get('confirmPassword').value) {
+  //     return { invalid: true };
+  //   }
+  // }
   onSubmit() {
     console.warn(this.registerationForm.value);
   }

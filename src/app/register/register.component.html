@@ -61,10 +61,10 @@
       <label>*Confirm Password</label>
       <input type="password"  formControlName="password"class="form-control">
       <span class="error" *ngIf="password.invalid && password.touched">Password is required & must be of 6 characters</span>
-      <span class="error"
+      <!-- <span class="error"
         *ngIf="registerationForm.get(['password','confirmPassword']).value != registerationForm.get(['password','confirmPassword']).value && registerationForm.get(['password','confirmPassword']).value != null">
         Password does not match
-      </span>
+      </span> -->
     </div>
     <p>Complete the form to enable button.</p>
     <button type="submit" [disabled]="!registerationForm.valid" class="btn btn-success">Submit</button>
