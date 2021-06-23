@@ -18,22 +18,34 @@ export class RegisterComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.registerationForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      address: this.fb.array([]),
-      mobileNo: new FormControl('', [
-        Validators.required,
-        Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
-      ]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')
-      ]),
-      confirmPassword: new FormControl('', Validators.required)
-    });
+    this.registerationForm = new FormGroup(
+      {
+        name: new FormControl('', [
+          Validators.required,
+          Validators.minLength(4)
+        ]),
+        address: this.fb.array([]),
+        mobileNo: new FormControl('', [
+          Validators.required,
+          Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
+        ]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [
+          Validators.required,
+          Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')
+        ]),
+        confirmPassword: new FormControl('', Validators.required)
+      },
+      {
+        validators: [this.passwordConfirming]
+      }
+    );
   }
-
+  passwordConfirming(c: AbstractControl): { invalid: boolean } {
+    if (c.get('password').value !== c.get('confirmPassword').value) {
+      return { invalid: true };
+    }
+  }
   onSubmit() {
     console.warn(this.registerationForm.value);
   }
