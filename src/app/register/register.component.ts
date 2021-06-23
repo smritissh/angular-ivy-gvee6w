@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormArray,
+  FormBuilder,
+  AbstractControl
+} from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
@@ -22,11 +28,12 @@ export class RegisterComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
         Validators.required,
-        Validators.minLength(6)
+        Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')
       ]),
       confirmPassword: new FormControl('', Validators.required)
     });
   }
+
   onSubmit() {
     console.warn(this.registerationForm.value);
   }
