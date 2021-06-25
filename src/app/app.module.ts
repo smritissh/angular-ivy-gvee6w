@@ -19,7 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { CartItemService } from './cart-item.service';
-import { RegisterComponent } from './register/register.component';
+
 import { FormComponent } from './form/form.component';
 import { NameService } from './name.service';
 import { LoginComponent } from './login/login.component';
@@ -49,7 +49,6 @@ const appRoutes: Routes = [
     ProductFilterPipe,
     DetailsFilterPipe,
     HomeComponent,
-    RegisterComponent,
     FormComponent,
     LoginComponent
   ],
