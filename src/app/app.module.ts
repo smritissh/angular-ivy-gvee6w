@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'form', component: FormComponent },
+  {path:'login',component:LoginComponent}
   { path: ':id', component: DetailsComponent }
 ];
 
