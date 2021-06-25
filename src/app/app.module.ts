@@ -22,6 +22,7 @@ import { CartItemService } from './cart-item.service';
 import { RegisterComponent } from './register/register.component';
 import { FormComponent } from './form/form.component';
 import { NameService } from './name.service';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     DetailsFilterPipe,
     HomeComponent,
     RegisterComponent,
-    FormComponent
+    FormComponent,
+    LoginComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartItemService, NameService]
