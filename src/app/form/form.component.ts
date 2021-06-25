@@ -33,13 +33,11 @@ export class FormComponent implements OnInit {
         email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [
           Validators.required,
-          Validators.minLength(6),
-          Validators.maxLength(6)
+          Validators.minLength(6)
         ]),
         confirmPassword: new FormControl('', [
           Validators.required,
-          Validators.minLength(6),
-          Validators.maxLength(6)
+          Validators.minLength(6)
         ])
       },
       {
