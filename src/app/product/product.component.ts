@@ -31,7 +31,6 @@ export class ProductComponent implements OnInit {
       this.cartItem.sendCartItem(this.c);
     }
   }
-
   constructor(private cartItem: CartItemService) {}
   ngOnInit() {}
 }
