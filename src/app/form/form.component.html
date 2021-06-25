@@ -62,7 +62,7 @@
       <input type="password"  formControlName="confirmPassword"class="form-control">
       <span class="error" *ngIf="confirmPassword.invalid && confirmPassword.touched">Password is required & must be of 6 characters</span>
       <span class="error"
-        *ngIf="registerationForm.get(['password','confirmPassword']).value != registerationForm.get(['password','confirmPassword']).value && registerationForm.get(['password','confirmPassword']).value != null">
+        *ngIf="registerationForm.get('password').value !== registerationForm.get('confirmPassword').value && registerationForm.get('password').value !== null">
         Password does not match
       </span>
     </div>
