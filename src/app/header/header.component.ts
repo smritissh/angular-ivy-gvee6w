@@ -10,6 +10,7 @@ import { NameService } from '../name.service';
 export class HeaderComponent implements OnInit {
   searchString = '';
   cartCount = 0;
+  displayname = '';
   @Output() searchInputEmitter = new EventEmitter();
 
   onInput(event) {
@@ -28,7 +29,8 @@ export class HeaderComponent implements OnInit {
     });
 
     this.name.getName().subscribe(e => {
-      this.name = e;
+      this.displayname = e;
     });
+    console.log(this.displayname);
   }
 }

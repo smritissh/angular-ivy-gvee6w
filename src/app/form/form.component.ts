@@ -15,7 +15,7 @@ import { NameService } from '../name.service';
 })
 export class FormComponent implements OnInit {
   registerationForm: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private username: NameService) {}
 
   ngOnInit() {
     this.registerationForm = new FormGroup(
@@ -45,7 +45,9 @@ export class FormComponent implements OnInit {
       }
     );
   }
-  onSubmit() {}
+  onSubmit() {
+    this.username.sendName(this.registerationForm.get('name').value);
+  }
   address(): FormArray {
     return this.registerationForm.get('address') as FormArray;
   }
