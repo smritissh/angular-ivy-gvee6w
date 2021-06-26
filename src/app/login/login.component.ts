@@ -7,9 +7,20 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public loginForm = FormGroup;
+  loginForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loginForm = new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      email: new FormControl('', [Validators.required, Validators.email])
+    });
+  }
+  get name() {
+    return this.loginForm.get('name');
+  }
+  get email() {
+    return this.loginForm.get('email');
+  }
 }
