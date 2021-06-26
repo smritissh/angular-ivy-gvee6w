@@ -19,5 +19,6 @@
       <span class="error" *ngIf="email.invalid && email.touched">Email is Invalid</span>
     </div>
     <button class="btn btn-success"[disabled]="loginForm.invalid"(click)="onSubmit">Submit</button>
+    <button class="btn btn-primary" routerLink="">Back</button>
   </form>
 </div>
