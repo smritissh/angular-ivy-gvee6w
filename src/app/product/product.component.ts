@@ -16,6 +16,7 @@ export interface Data {
 export class ProductComponent implements OnInit {
   datas: Data[] = data;
   c = 0;
+  currentVal = [];
   @Input() searchStringRecieved: string;
   onUserClick(event) {}
   onCartBtnClick() {
@@ -30,6 +31,9 @@ export class ProductComponent implements OnInit {
       this.c = this.c - 1;
       this.cartItem.sendCartItem(this.c);
     }
+  }
+  getVal(val) {
+    this.currentVal = val;
   }
   constructor(private cartItem: CartItemService) {}
   ngOnInit() {}

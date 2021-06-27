@@ -1,3 +1,12 @@
+<div class="row">
+  <div class=" col-md-4">
+    <label>Add Category</label>
+    <input type="text" #box>
+    <button (click)="getVal(box.value)">Add</button>
+    <h2>{{currentVal}}</h2>
+  </div>
+</div>
+
 <div class="container">
   <div class="card" *ngFor="let item of datas | productFilter:searchStringRecieved">
     <img
