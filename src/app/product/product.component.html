@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="card" *ngFor="let item of datas | productFilter:searchStringRecieved">
     <img
@@ -13,7 +12,6 @@
         <button class="btn btn-danger" (click)="onCartRemove()">Remove</button>
         <button class="btn btn-primary"  (click)="onUserClick($event)" [routerLink]="item.id">More</button>
       </div>
-
     </div>
   </div>
 </div>
