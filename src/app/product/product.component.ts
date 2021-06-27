@@ -40,6 +40,9 @@ export class ProductComponent implements OnInit {
     this.tasks.push({ name: this.task });
     this.task = '';
   }
+  onClickDel(i: number) {
+    // this.task.removeAt(i);
+  }
   constructor(private cartItem: CartItemService) {}
   ngOnInit() {}
 }

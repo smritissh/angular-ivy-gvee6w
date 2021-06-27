@@ -4,16 +4,24 @@
       <div class="input-group">
         <label>Add Category</label>
         <input type="text" class="form-control"[(ngModel)]="task" />
-        <button class="btn btn-primary" (click)="onClickAdd()">Add</button>
+        <button class="btn btn-primary" (click)="onClickAdd()">+</button>
       </div>
     </div>
   </div>
   <br />
-  <ul class="list-group">
+  <!-- <ul class="list-group">
     <li *ngFor="let task of tasks">
       <span> {{ task.name }} </span>
+
     </li>
-  </ul>
+
+  </ul> -->
+  <div class="list">
+    <div *ngFor="let task of tasks; let i =index">{{ task.name }}
+      <button class="btn btn-danger"(click)="onClickDel(i)">-</button>
+    </div>
+
+  </div>
 </div>
 
 <div class="container">
