@@ -1,10 +1,19 @@
-<div class="row">
-  <div class=" col-md-4">
-    <label>Add Category</label>
-    <input type="text" #box>
-    <button (click)="getVal(box.value)">Add</button>
-    <h2>{{currentVal}}</h2>
+<div class="box">
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <label>Add Category</label>
+        <input type="text" class="form-control"[(ngModel)]="task" />
+        <button class="btn btn-primary" (click)="onClickAdd()">Add</button>
+      </div>
+    </div>
   </div>
+  <br />
+  <ul class="list-group">
+    <li *ngFor="let task of tasks">
+      <span> {{ task.name }} </span>
+    </li>
+  </ul>
 </div>
 
 <div class="container">

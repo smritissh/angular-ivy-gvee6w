@@ -8,6 +8,7 @@ export interface Data {
   image: string;
   details: string;
 }
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -16,7 +17,10 @@ export interface Data {
 export class ProductComponent implements OnInit {
   datas: Data[] = data;
   c = 0;
-  currentVal = [];
+  // currentVal = [];
+  task: string;
+  tasks = [];
+
   @Input() searchStringRecieved: string;
   onUserClick(event) {}
   onCartBtnClick() {
@@ -32,8 +36,9 @@ export class ProductComponent implements OnInit {
       this.cartItem.sendCartItem(this.c);
     }
   }
-  getVal(val) {
-    this.currentVal = val;
+  onClickAdd() {
+    this.tasks.push({ name: this.task });
+    this.task = '';
   }
   constructor(private cartItem: CartItemService) {}
   ngOnInit() {}
